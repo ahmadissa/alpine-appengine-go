@@ -1,10 +1,14 @@
 FROM google/cloud-sdk:alpine
 
-RUN apk add --update --no-cache curl tar
+RUN apk add --update --no-cache curl tar \
+	&& rm -rf /var/lib/apt/lists/* \
+    /var/cache/apk/* \
+    /usr/share/man \
+    /tmp/*
 
-ARG GOLANG_VERSION=1.8.7
-ARG SHA=de32e8db3dc030e1448a6ca52d87a1e04ad31c6b212007616cfcc87beb0e4d60
-ARG BASE_URL=https://storage.googleapis.com/golang/go${GOLANG_VERSION}.linux-amd64.tar.gz
+ARG GOLANG_VERSION=1.9.7
+ARG SHA=88573008f4f6233b81f81d8ccf92234b4f67238df0f0ab173d75a302a1f3d6ee
+ARG BASE_URL=https://dl.google.com/go/go${GOLANG_VERSION}.linux-amd64.tar.gz
 
 RUN mkdir -p /usr/share/golang /usr/share/golang/gopath && \
 	curl -fsSL -o /tmp/golang.tar.gz ${BASE_URL} && \
