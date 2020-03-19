@@ -36,5 +36,5 @@ gcloud app deploy --version $VERSION
 
 ```
 docker run --rm zenika/alpine-appengine-go go version
-go version go1.9.7 linux/amd64
+go version go1.14.1 linux/amd64
 ```

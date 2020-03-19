@@ -6,8 +6,8 @@ RUN apk add --update --no-cache curl tar \
     /usr/share/man \
     /tmp/*
 
-ARG GOLANG_VERSION=1.9.7
-ARG SHA=88573008f4f6233b81f81d8ccf92234b4f67238df0f0ab173d75a302a1f3d6ee
+ARG GOLANG_VERSION=1.14.1
+ARG SHA=2f49eb17ce8b48c680cdb166ffd7389702c0dec6effa090c324804a5cac8a7f8
 ARG BASE_URL=https://dl.google.com/go/go${GOLANG_VERSION}.linux-amd64.tar.gz
 
 RUN mkdir -p /usr/share/golang /usr/share/golang/gopath && \
