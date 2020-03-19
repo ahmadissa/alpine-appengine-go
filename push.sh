@@ -1,0 +1,1 @@
+docker push beetek/alpine-appengine-go:latest
