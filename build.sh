@@ -1,0 +1,1 @@
+docker build . -t beetek/alpine-appengine-go:1.14.1

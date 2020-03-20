@@ -1,1 +1,1 @@
-docker push beetek/alpine-appengine-go:latest
+docker push beetek/alpine-appengine-go:1.14.1
